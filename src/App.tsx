@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+// Creating and nesting components
 function MyButton() {
     return (
         <button>
@@ -9,11 +10,22 @@ function MyButton() {
     );
 }
 
+// Writing markup with JSX
+function AboutPage() {
+    return (
+        <>
+            <h1>About</h1>
+            <p>Hello there.<br />How do you do?</p>
+        </>
+    );
+}
+
 function App() {
   return (
       <div className="App">
           <h1>Welcome to My App</h1>
           <MyButton />
+          <AboutPage />
       </div>
   );
 }
