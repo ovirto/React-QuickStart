@@ -1,3 +1,8 @@
+/* Adding styles */
+.avatar {
+  border-radius: 50%;
+}
+
 .App {
   text-align: center;
 }
