@@ -1,6 +1,17 @@
 import React from 'react';
 import './App.css';
 
+
+
+// Displaying Data
+const user = {
+    name: 'Hedy Lamarr',
+    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+    imageSize: 90,
+};
+
+
+
 // Creating and nesting components
 function MyButton() {
     return (
@@ -9,6 +20,8 @@ function MyButton() {
         </button>
     );
 }
+
+
 
 // Writing markup with JSX
 function AboutPage() {
@@ -19,6 +32,8 @@ function AboutPage() {
         </>
     );
 }
+
+
 
 function App() {
   return (
@@ -31,4 +46,26 @@ function App() {
   );
 }
 
-export default App;
+
+
+//export default App;
+
+
+
+// Displaying Data
+export default function Profile() {
+    return (
+        <>
+            <h1>{user.name}</h1>
+            <img
+                className="avatar"
+                src={user.imageUrl}
+                alt={'Photo of ' + user.name}
+                style={{
+                    width: user.imageSize,
+                    height: user.imageSize
+                }}
+            />
+        </>
+    );
+}
