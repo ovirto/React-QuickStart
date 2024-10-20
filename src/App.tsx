@@ -3,35 +3,27 @@ import './App.css';
 import { useState} from "react";
 
 
-
-// Creating and nesting components
-function MyButton() {
-    // Updating the screen
+export default function MyApp() {
     const [count, setCount] = useState(0);
 
-    // Responding to events
     function handleClick() {
         setCount(count + 1);
     }
+
     return (
-        <button onClick={handleClick}>
+        <div>
+            <h1>Counters that update together</h1>
+            <MyButton count={count} onClick={handleClick} />
+            <MyButton count={count} onClick={handleClick} />
+        </div>
+    );
+}
+
+// @ts-ignore
+function MyButton({ count, onClick }) {
+    return (
+        <button onClick={onClick}>
             Clicked {count} times
         </button>
     );
 }
-
-
-function App() {
-  return (
-      <div className="App">
-          <img className="avatar"/>
-          <h1>Counters that update separately</h1>
-          <MyButton/>
-          <MyButton/>
-      </div>
-  );
-}
-
-
-
-export default App;
