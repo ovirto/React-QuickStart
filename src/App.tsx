@@ -3,7 +3,7 @@ import './App.css';
 import { useState} from "react";
 
 
-export default function Square() {
+export default function Board() {
     return (
         <>
             <div className="board-row">
