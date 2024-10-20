@@ -14,9 +14,13 @@ const user = {
 
 // Creating and nesting components
 function MyButton() {
+    // Responding to events
+    function handleClick() {
+        alert('You cliked me!');
+    }
     return (
-        <button>
-            I'm a button
+        <button onClick={handleClick}>
+            Click me
         </button>
     );
 }
@@ -46,7 +50,8 @@ function App() {
 
 
 
-//export default App;
+export default App;
+
 
 
 /*
@@ -70,6 +75,9 @@ export default function Profile() {
 
  */
 
+
+
+/*
 // Rendering Lists
 const products = [
     { title: 'Cabbage', isFruit: false, id: 1 },
@@ -93,3 +101,5 @@ export default function ShoppingList() {
         <ul>{listItems}</ul>
     );
 }
+
+ */
